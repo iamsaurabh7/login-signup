@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# React Login & Sign-Up Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React application demonstrating user authentication UI with comprehensive form validation, routing, and modern design patterns.
+
+## Features
+
+- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
+- **Form Validation**: Comprehensive client-side validation with real-time feedback
+- **React Router**: Navigation between Login and Sign-Up screens
+- **Redux State Management**: Centralized state management with Redux Toolkit
+- **TypeScript**: Full type safety throughout the application
+- **Modern UI**: Clean, professional interface with Tailwind CSS
+
+## Technologies Used
+
+- **React 19.1.1** - UI framework with functional components and hooks
+- **TypeScript 4.9.5** - Type-safe JavaScript development
+- **Redux Toolkit** - State management solution
+- **React Router v7** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Scripts** - Build tooling and development server
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd login-signup
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Form Validation Rules
+
+### Login Form
+- **Username**: Required field with basic validation
+- **Password**: Required field
+
+### Sign-Up Form
+- **Name**: Alphabets only, minimum 2 characters
+- **Username**: Alphanumeric with underscores/hyphens, 3-20 characters
+- **Email**: Valid email format required
+- **Phone**: International format with country code (e.g., +1234567890)
+- **Password**: Minimum 8 characters with uppercase, lowercase, and number
+- **Confirm Password**: Must match the password field
+
+## Application Flow
+
+1. **Default Route**: Redirects to Login page
+2. **Login Page**: User can navigate to Sign-Up or attempt login
+3. **Sign-Up Page**: After successful validation, redirects to Login with success message
+4. **Form Validation**: Real-time validation with error messages below each field
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the development server
+- `npm run build` - Creates production build
+- `npm test` - Runs test suite
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/          # React components
+│   ├── ErrorBoundary.tsx   # Error handling component
+│   ├── Input.tsx           # Reusable form input component
+│   ├── Login.tsx           # Login page component
+│   └── SignUp.tsx          # Sign-up page component
+├── store/              # Redux store configuration
+│   ├── store.ts            # Store setup
+│   └── authSlice.ts        # Authentication state slice
+├── types/              # TypeScript type definitions
+│   └── index.ts            # Application types
+├── utils/              # Utility functions
+│   └── validation.ts       # Form validation logic
+├── App.tsx             # Main application component
+└── index.tsx           # Application entry point
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Browser Support
 
-### `npm test`
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.# login-signup
